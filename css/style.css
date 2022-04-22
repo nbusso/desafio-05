@@ -1,0 +1,825 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+/* 
+font-family: 'Bebas Neue', cursive;
+font-family: 'Lato', sans-serif;
+*/
+
+/* GLOBALES Y GENERALES ------------------------ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Bebas Neue', cursive;
+    font-weight: normal;
+}
+
+h2 {
+    font-size: 3rem;
+    line-height: 100%;
+    padding-bottom: 2vh;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+
+h4 {
+    font-size: 2rem;
+}
+
+a {
+    text-decoration: none;
+    font: inherit;
+}
+.masInfo {
+    padding-top: 1.5vh;
+}
+.masInfo a {
+    color: #b00655;
+    text-transform: uppercase;
+}
+
+
+/* grid --------------------------------------- */
+.wrapperMain {
+    height: 100vh;
+    display: grid;
+    grid-template-areas:
+    'header'
+    'novedades'
+    'explora'
+    'como-jugar'
+    'reviews'
+    'footer'
+    ;
+}
+
+header {
+    grid-area: header;
+}
+
+.wrapperNovedades {
+    grid-area: novedades;
+}
+
+.wrapperExplora {
+    grid-area: explora;
+}
+
+.wrapperComoJugar {
+    grid-area: como-jugar;
+}
+
+.wrapperReviews {
+    grid-area: reviews;
+}
+
+footer {
+    grid-area: footer;
+}
+
+/* HEADER ----------------------------------- */
+
+    /* NAV ---------------------------------- */
+
+
+header .logoWrapper {
+    width: 200px;
+    position: absolute;
+    right: 0;
+    visibility: hidden;
+}
+
+.logoWrapper img {
+    width: 100%;
+    padding-left: 20px;
+}
+
+.nav {
+    width: 100%;
+    height: 8vh;
+    background-color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    box-shadow: 0px 0px 5px #0000009c;
+    z-index: 10;
+
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.nav ul {
+    display: flex;
+    flex-flow: row nowrap;
+    background-color: white;
+    width: 100%;
+}
+
+.nav ul li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 20%;
+    height: 8vh;
+    font-size: 0.75rem;
+    border-left: 1px solid lightgrey;
+}
+
+.nav ul li a {
+    color: #450079;
+}
+
+    /* LANDING BANNER -----------------------*/
+
+.landingBanner {
+    padding-top: 8vh;
+    height: 100vh;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    background-color: rgb(46, 0, 84);
+    background-image: url('../img/bg_1.jpg');
+    background-position: center;
+    background-blend-mode: multiply;
+    background-attachment: fixed;
+}
+
+.landingBanner h1,
+.landingBanner h2 {
+    color: white;
+}
+
+.landingBanner h1 {
+    width: 80%;
+    line-height: 80%;
+    font-size: 8rem;
+}
+
+.landingBanner h2 {
+    width: 80%;
+    font-size: 2rem;
+    text-align: right; 
+}
+
+/* NOVEDADES -----------------------*/
+.wrapperNovedades,
+.wrapperExplora,
+.wrapperComoJugar,
+.wrapperReviews {
+    padding: 8vh 3vw;
+}
+
+.wrapperNovedades h2 {
+    border-bottom: 5px solid #a4028e;
+}
+
+.novedades {
+    display: flex;
+    flex-flow: row nowrap;
+    margin: 3vh 0;
+}
+
+.novedades .novedadesFecha {
+    border-right: 1px dotted #a4028e;
+    padding: 0 5px;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: flex-start;
+}
+
+.novedades .novedadesNoticia {
+    padding: 0 5px;
+}
+
+.novedades .novedadesNoticia h4,
+.novedades .novedadesFecha h4 {
+    font-size: 1.5rem;
+    line-height: 100%;
+    color:#450079;
+}
+
+.novedades .novedadesNoticia p {
+    color: #505050;
+    padding-top: 1vh;
+}
+
+/* EXPLORA TYRIA -----------------------------------------*/
+.col_1,
+.col_2 {
+    width: 100%;
+    text-align: center;
+}
+
+/* || col 1 --------------------------------- */
+.wrapperExplora {
+    background-image: url(../img/Concept24.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-color: #2e0054c3;
+    background-blend-mode: multiply;
+}
+
+.wrapperExplora .col_1 {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 3vh;
+}
+
+.wrapperExplora h2,
+.wrapperExplora h4 {
+    width: 100%;
+}
+
+.wrapperExplora h2 {
+    border-bottom: 5px solid #a4028e;
+    color:white;
+}
+
+.wrapperExplora h4 {
+    padding-top: 1vh;
+    color: #d6d6d6;
+}
+
+/* || col 2 --------------------------------- */
+
+.wrapperExplora .col_2 {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 35px;
+    margin-bottom: 3vh;
+}
+
+/* --> cards ---------------------------------------------------------*/
+
+.card {
+    width: 220px;
+    height: 330px;
+    border: 10px solid #492646;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+    background-color: #5e00566f;
+    /* background-blend-mode: multiply; */
+    background-size: cover;
+    background-position: center;
+}
+
+.card h5, .card p {
+    color: white;
+}
+
+.card h5 {
+    font-size: 20px;
+    text-transform: uppercase;
+    padding: 10px;
+    text-shadow: 1px 1px 10px #000000;
+}
+
+.card p {
+    padding: 10px;
+    background-color: #350135b2;
+}
+
+
+.card_1 {
+    background-image: url('../img/Concept07.jpg');
+}
+
+.card_2 {
+    background-image: url('../img/caithe.jpg');
+}
+
+.card_3 {
+    background-image: url('../img/LegendaryMed.jpg');
+    background-position-x: 450px;
+}
+
+.card_4 {
+    background-image: url('../img/LegendaryLight.jpg');
+    background-position-x: 350px;
+}
+
+.card_5 {
+    background-image: url('../img/boss_1.jpg');
+}
+
+/* COMO JUGAR  -----------------------------------------*/
+
+.wrapperComoJugar h2 {
+    border-bottom: 5px solid #a4028e;
+}
+
+.wrapperComoJugar h4 {
+    color: grey;
+    padding: 2vh 0;
+}
+
+.wrapperComoJugar a {
+    color: white;
+}
+
+.showroom {
+    width: 100%;
+    padding: 1vh 0;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-content: center;
+    gap: 25px;
+}
+
+.imgContainer {
+    font-size: 0;
+    width: 100%;
+    height: 15vh;
+    min-width: 200px;
+    min-height: 150px;
+    background-color: #9c018746;
+    background-blend-mode: multiply;
+    border: 1px solid #4d0042;
+    background-size: cover;
+    box-shadow: 2px 2px 5px #343333;
+
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.imgContainer h3 {
+    font-size: 1.5rem;
+    color:whitesmoke;
+    padding-bottom: 10px;
+    font-weight: normal;
+    text-transform: uppercase;
+}
+
+.imgContainer:hover {
+    background-blend-mode: normal;
+}
+
+.imgContainer:hover h3 {
+    text-decoration: underline dotted;
+}
+
+.img1 {
+    background-image: url('../img/a-norn-necro.jpg');
+}
+
+.img2 {
+    background-image: url('../img/ashford-at-night.jpg');
+}
+
+.img3 {
+    background-image: url('../img/asuras-best-friend.jpg');
+}
+
+.img4 {
+    background-image: url('../img/caithe.jpg');
+}
+
+/* REVIEWS --------------------------------------------------- */
+.wrapperReviews {
+    background-image: url(../img/Concept07.jpg);
+    background-position: center;
+    background-color: #450079;
+    background-attachment: fixed;
+    background-size: cover;
+    background-blend-mode: multiply;
+}
+
+.wrapperReviews h2,
+.wrapperReviews h4 {
+    width: 100%;
+}
+
+.wrapperReviews h2 {
+    border-bottom: 5px solid #a4028e;
+    color:white;
+}
+
+.wrapperReviews h4 {
+    padding: 2vh 0;
+    color: #d6d6d6;
+}
+
+.wrapperReviews .col_2 {
+    width: 100%;
+    min-height: 46vh;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.wrapperReviews .col_2 .rev {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-around;
+    align-content: space-around;
+    align-items: center;
+    gap: 20px;
+    width: 205px;
+    height: 205px;
+
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.wrapperReviews .col_2 .rev .img_cont {
+    width: 150px;
+    height: 150px;
+    background-color: white;
+    border: 4px solid white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wrapperReviews .col_2 .rev .img_cont:hover {
+    -webkit-box-shadow: inset 0px 0px 15px 5px #57004bcb; 
+    box-shadow: inset 0px 0px 15px 5px #57004bcb;
+}
+
+.quote,
+.number {
+    color: white;
+}
+
+.quote {
+    font-style: italic;
+}
+
+.number {
+    font-size: 30px;
+}
+
+/* FOOTER ------------------------------------------- */
+footer {
+    background-color: #ffffff;
+}
+
+.footerWrapper {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 0;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+}
+
+.footerNav,
+.footerSocials,
+.footerAnet {
+    width: 100%;
+    min-height: 18vh;
+}
+
+
+/* FOOTER NAV ---------- */
+.footerNav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    position: absolute;
+    right: 0;
+
+    visibility: hidden;
+}
+
+.footerNav ul li {
+    font-size: 1.3rem;
+    list-style-type: none;
+    /* text-align: center; */
+}
+
+.footerNav ul li:hover {
+    font-size: 1.4rem;
+    color: #c201a5;
+}
+
+.footerNav ul li a {
+    color: inherit;
+}
+
+
+/* FOOTER SOCIALS ----------- */
+.footerSocials {
+    border-bottom: 1px dotted #0000005c;
+
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    flex: 2;
+}
+
+.footerSocialsIcon {
+    width: 65px;
+    padding: 8px;
+    border-radius: 50%;
+}
+
+.footerSocialsIcon img {
+    width: 100%;
+}
+
+.footerSocialsIcon:hover {
+    width: 70px;
+}
+
+/* FOOTER ANET ----------------*/
+.footerAnet {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+}
+
+.footerAnetLogoWrap {
+    width: min-content;
+}
+
+/* PAGES ----------------------------------- */
+
+.mainPages {
+    max-width: 1200px;
+    padding: 0 3vw;
+    margin: 8vh auto 4vh;
+}
+
+.mainPages h1 {
+    text-align: center;
+    font-size: 5rem;
+}
+
+.mainPages h3 {
+    text-align: center;
+    color: #616161;
+    padding-bottom: 2vh;
+    border-bottom: 3px solid #450079;
+}
+
+/* PAGES: RAZAS ----------------------------------- */
+
+.razas {
+    padding: 3vh 0;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    border-bottom: 1px dotted #f7a0f0;
+}
+
+.razas .col_2 {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+
+    
+    padding-bottom: 3vh;
+}
+
+.razas h4 {
+    font-size: 3rem;
+    color: #450079;
+}
+
+.razas h5 {
+    font-size: 1.5rem;
+    color: #505050;
+    padding-bottom: 1.5vh;
+}
+
+.mainRazas .razas .col_1 img {
+    width: 100%;
+    max-width: 350px;
+}
+
+/* PAGES: CLASES ---------------------------------- */
+.profWrapper {
+    display: grid;
+    grid-template-areas:
+    'hipnotizador hipnotizador'
+    'guardian guardian'
+    'nigromante nigromante'
+    'guardabosques guardabosques'
+    'elementalista elementalista'
+    'guerrero guerrero'
+    'ladron ladron'
+    'ingeniero ingeniero'
+    'retornado retornado';
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(9, auto);
+    gap: 20px;
+}
+
+.profHipnotizador {
+    grid-area: hipnotizador;
+}
+
+.profGuardian {
+    grid-area: guardian;
+}
+
+.profNigromante {
+    grid-area: nigromante;
+}
+
+.profGuardabosques {
+    grid-area: guardabosques;
+}
+
+.profElementalista {
+    grid-area: elementalista;
+}
+
+.profGuerrero {
+    grid-area: guerrero;
+}
+
+.profLadron {
+    grid-area: ladron;
+}
+
+.profIngeniero {
+    grid-area: ingeniero;
+}
+
+.profRetornado {
+    grid-area: retornado;
+}
+.prof {
+    padding: 5vh 0;
+    border-bottom: 1px dotted #f7a0f0;
+}
+
+.prof h4 {
+    color:#450079;
+}
+
+/* PAGES: LINKS ---------------------------------- */
+.mainLinks {
+    padding: 2vh 2vw;
+}
+
+.wrapperCardLinks {
+    margin-top: 4vh;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.cardLinks {
+    border: 1px solid #c3c3c3;
+    padding: 2vh 2vw;
+    width: 100%;
+    max-width: 320px;
+}
+
+.cardLinks h4 {
+    color: #450079;
+}
+
+.cardLinks ul {
+    padding-left: 20px;
+}
+
+.cardLinks ul li {
+    line-height: 150%;
+}
+
+.cardLinks ul li a {
+    color:#4d0042;
+}
+
+@media screen and (min-width: 560px) {
+    .landingBanner {
+        background-image: url(../img/Concept07.jpg);
+        background-size: cover;
+    }
+}
+
+@media screen and (min-width: 600px) {
+    .showroom .imgContainer {
+        width: 20%;
+    }
+}
+
+@media screen and (min-width: 655px) {
+    .footerWrapper {
+        flex-flow: row nowrap;
+    }
+
+    .footerNav {
+        visibility: visible;
+        position: static;
+    }
+
+    .footerSocials {
+        border-bottom: none;
+    }
+
+    .footerAnetLogoWrap {
+        width: 100px;
+    }
+
+    .footerAnetLogoWrap img {
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .nav .logoWrapper {
+        position: static;
+        visibility: visible;
+    }
+    
+    .nav ul {
+        width: 50%;
+    }
+
+    /* RAZAS ---------------------- */
+    .mainRazas .razas {
+        flex-flow: row nowrap;
+    }
+
+    .mainRazas .razas .col_2 {
+        align-items: flex-start;
+        text-align: left;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+        
+        .nav ul li a {
+            font-size: 1rem;
+            text-transform: uppercase;
+        }
+        
+        .nav ul li {
+            border: none;
+        }
+
+        /* CLASES ----------------------- */
+        .profWrapper {
+            grid-template-areas:
+            'hipnotizador guardian'
+            'nigromante guardabosques'
+            'elementalista guerrero'
+            'ladron ingeniero'
+            'retornado retornado'
+            ;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(5, auto);
+            max-width: 1200px;    
+        }
+
+        
+        .profWrapper .prof {
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+        }
+    
+        .profWrapper .prof .col_1 {
+            display: flex;
+            justify-content: end;
+        }
+    
+        .profWrapper .prof .col_2 {
+            display: flex;
+            flex-flow: column nowrap;
+            justify-content: center;
+            align-items: flex-start;
+            text-align: left;
+        }
+    
+        .profRetornado {
+            width:50%;
+            justify-self: center;
+        }
+    
+        .prof {
+            border: none;
+        }
+}
