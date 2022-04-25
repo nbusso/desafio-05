@@ -45,6 +45,10 @@ a {
     text-transform: uppercase;
 }
 
+.masInfo a:hover {
+    text-decoration: underline wavy;
+}
+
 
 /* grid --------------------------------------- */
 .wrapperMain {
