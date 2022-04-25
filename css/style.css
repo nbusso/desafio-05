@@ -608,7 +608,6 @@ footer {
     flex-flow: column nowrap;
     justify-content: center;
 
-    
     padding-bottom: 3vh;
 }
 
@@ -626,6 +625,25 @@ footer {
 .mainRazas .razas .col_1 img {
     width: 100%;
     max-width: 350px;
+
+    animation: popImg 3s linear infinite;
+}
+
+@keyframes popImg {
+    0% {
+        width: 100%;
+        max-width: 350px;
+    }
+
+    50% {
+        width: 95%;
+        max-width: 342px;
+    }
+
+    100% {
+        width: 100%;
+        max-width: 350px;
+    }
 }
 
 /* PAGES: CLASES ---------------------------------- */
